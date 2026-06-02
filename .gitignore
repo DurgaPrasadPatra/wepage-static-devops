@@ -1,0 +1,7 @@
+#######################
+## Below mentioned files be ignored by Git.
+## It will not br tacked by git.
+#######################
+mydata.txt
+*.log 
+error.txt
