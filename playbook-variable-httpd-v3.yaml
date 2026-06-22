@@ -1,0 +1,16 @@
+---
+- name: Install Apache
+  hosts: webservers
+  become: true
+
+  tasks:
+
+    - name: Install Apache
+      apt:
+        name: apache2
+        state: present
+
+    - name: Deploy Template
+      template:
+        src: /home/ec2-user/poject-ansible/index.html.j2
+        dest: /var/www/html/index.html
